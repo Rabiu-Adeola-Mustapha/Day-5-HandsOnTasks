@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp</title>
+</head>
+    Camp Brush Up <br> <br>
+<body>
+    <form  >   
+
+        <input style type="text" value="" placeholder="" id ="put">
+    <input type="text" value="" placeholder="" id="output">
+
+     <button type="submit" >Convert</button>
+
+    </form>
+    
+
+
+
+    <script>
+        let x = document.getElementById("put");
+        let y = document.getElementById("output");
+        document.querySelector('form').addEventListener('submit',convert)
+        function convert(e){
+             e.preventDefault();
+    
+             var money = new Intl.NumberFormat("en-NG",{
+                style: 'currency',
+                currency: 'NGN',
+                
+            })
+            
+            y.value = money.format(x.value);
+        }
+
+
+    </script>
+</body>
+</html>

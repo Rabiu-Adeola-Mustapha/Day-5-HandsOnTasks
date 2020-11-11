@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerryPrac</title>
+</head>
+<body>
+
+    <h1>TODOS</h1>
+    <P>Walk the dog</P>
+    <p>Complete this course</p>
+    <p>Listen to Quran</p>
+    <p>Clean the dishes</p>
+    <p>Move to Adura</p>
+
+    <script>
+       let para = document.querySelectorAll('p')
+
+       para.forEach( function (para){
+       if(para.textContent.includes('the')){
+           para.remove()
+       }
+       })
+
+
+
+    </script>
+</body>
+</html>

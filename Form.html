@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerryPractise</title>
+</head>
+<body>
+    <form id="form" action="About.html">
+        Enter User name and password! <br> <br> 
+        <input type="text" id="uname" placeholder="User name" value="">
+        <br> <br>
+        <input type="password" id="pass" placeholder="Password" value=""><br><br>
+
+        <button type="submit" id="but1">Submit</button>
+
+    </form>
+     
+    <script>
+        document.getElementById('form').addEventListener('submit',reg1)
+        function reg1(e){
+            e.preventDefault()
+            var user = document.getElementById("uname");
+            var password = document.getElementById("pass");
+
+           switch(user.value.trim() || password.value.trim()){
+               case "":uname.style.border = "solid 3px red"
+                       password.style.border ="solid 3px red"
+                break;
+                //case alert("Password is too weak")
+                //break;
+
+                default: return;
+           }
+           return;
+        }
+
+
+
+
+    
+    </script>
+</body>
+</html>

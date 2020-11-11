@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form  onsubmit="return reg1()"     action="HomePage.html">
+        Enter User name and password! <br> <br> 
+        <input type="text" id="uname" placeholder="User name" value="">
+        <br> <br>
+        <input type="password" id="pass" placeholder="Password" value=""><br><br>
+
+        <button type="submit" id="but1">Submit</button>
+
+    </form>
+     
+    <script>
+
+        function reg1(){
+
+            var user = document.getElementById("uname");
+            var password = document.getElementById("pass");
+
+            if( user.value.trim() ==""){
+
+            uname.style.border = "solid 3px red"
+            return false;
+            
+
+            }
+
+            else if(pass.value.trim() ==""){
+
+                password.style.border="solid 3px red"
+                return false;
+                
+
+            }
+
+            else if (password.value.length<=5){
+
+                alert("Password is too weak")
+                return false;
+            }
+
+            else{
+
+                return true
+            }
+
+
+
+        }
+
+
+
+
+    
+    </script>
+</body>
+</html>

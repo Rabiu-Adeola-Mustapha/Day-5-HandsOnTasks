@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        
+        function do_math(userInput){
+            let userInputArr = userInput.split(" "); //converting the user input string to an array.
+            let foundCharArr = [];
+           let getNumbArr = [];
+            let getNumbMix = [];
+            
+            
+            for( let i =0; i < userInputArr.length; i++){
+
+                let foundChar = userInputArr[i].match(/[a-z]/); //searches for character
+                foundCharArr.push(foundChar);
+
+                //console.log(foundCharArr)
+        
+            }
+
+            foundChar = foundCharArr.sort(); //sorting the array alphabetically.
+            console.log(foundChar)
+
+             for (let i = 0; i<foundChar.length; i++){
+                 getNumbMix.push(foundChar [i]["input"]);
+                 getNumb = foundChar[i]["input"].replace(/[a-z]/, "");
+                 getNumbArr.push(getNumb);
+
+
+
+             }
+
+             console.log(getNumbMix);
+             console.log(getNumbArr);
+
+
+             let result = parseInt(getNumbArr[0]);
+             let count = 1, i =1, opr = 0;
+
+             while (count < getNumbArr.length) {
+                 switch(opr){
+                     case 0:
+                     result += parseInt(getNumbArr[i]);
+                     break;
+
+                     case 1:
+                     result -= parseInt(getNumbArr[i]);
+                     break;
+
+                     case 2:
+                     result *= parseInt(getNumbArr[i]);
+                     break;
+
+                     case 3:
+                     result /= parseInt(getNumbArr[i]);
+                     break;
+                 }
+                 opr += 1;
+                 if (opr > 3) {
+                     opr = 0;
+                 }
+                 count ++;
+                 i++;
+
+             }
+
+             console.log(result);
+        }
+        do_math("24z6 1x23 y369 89a 900b");
+
+
+    </script>
+    
+</body>
+</html>

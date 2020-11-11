@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+         let x = [3,5,6,9,12,15,18];
+        let y = [];
+
+        function divisibleByTwoAndThree(x){
+            for (i = 0; i< x.length; i++){
+                if(x[i] % 2 == 0 && x[i] % 3== 0 ){
+                 y.push(x[i]);
+                }
+            }
+            return y;
+        }
+        
+        console.log(divisibleByTwoAndThree(x))
+
+
+         /*function divisibleByTwoAndThree(z)
+           x.forEach(divisiveByTwoAndThree(z){
+                 if (x[i] % 2 == 0 && x[i] % 3 == 0){
+                     y.push(x[i]);
+
+                    }
+
+                        return y;
+                         console.log(y)
+           
+
+           }
+
+           )*/
+            
+     
+    </script>
+</body>
+</html>
